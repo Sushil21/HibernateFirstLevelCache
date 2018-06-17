@@ -23,7 +23,7 @@ As you see in below code of call StudentDaoImpl,
 i tried to get same record of student with same id so hibernate firstlevel cache automatically work at here, 
 you can see above output the query execute single time in a session and we get same output.
 
-Session session=sessionFactory.openSession();
+	Session session=sessionFactory.openSession();
 		try{
 			 Student stud = session.get(Student.class, id);
 			 System.out.println("first query result student is::"+stud);
